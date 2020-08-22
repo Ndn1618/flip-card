@@ -12,4 +12,35 @@
 .card {
     width: 100%;
     height: 100%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+.card figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card .front {
+    background-color: #2285a7;
+    color: #fff;
+    text-align: center;
+}
+.card .back {
+    background-color: lightpink;
+    transform: rotateY(180deg);
+}
+.back button {
+    padding: 5px 10px;
+    background: #df8695;
+    border: none;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
